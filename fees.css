@@ -1,0 +1,139 @@
+.btn-primary{
+    background-color:  rgb(49,183,188);
+    border-color: rgb(49,183,188);
+  }
+  
+  .btn-primary:hover{
+    background-color:rgb(0,92,110);
+    border-color: rgb(0,92,110);
+  }
+  
+  .btn-check:focus+.btn-primary, .btn-primary:focus {
+    background-color:rgb(0,92,110);
+    border-color: rgb(0,92,110);
+  }
+  /*...*/
+  header[role="banner"] 
+  #logo-main {
+      display: block;
+      margin: 20px auto;
+      height: 4.1rem;
+    }
+  
+  .navbar > .container{
+      border-top: 1px solid #989696;
+      border-bottom: 1px solid #989696;
+  }
+  
+  .navbar {
+      padding-top: 1.5rem;
+      padding-bottom: 3.5rem;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+      padding: 15px;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+      background-color: rgb(49,183,188);
+      color: white;
+  }
+  
+  .btn-outline-success:hover {
+      background-color:rgb(49,183,188);
+      border-color: rgb(49,183,188);
+  }
+  
+  .btn-outline-success {
+      color: rgb(0,92,110);
+      border-color: rgb(0,92,110);
+  }
+  
+  .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(255 255 255 / 100%);
+    background-color:  rgb(49,183,188);
+}
+
+
+  
+  /* Navbar Ended */
+  .footer .links li a:hover {
+    text-decoration: none;
+    color: rgb(49,183,188);
+}
+  .footer {
+    background: rgb(0,92,110);
+    color: white;
+  }
+  .footer .links ul {
+    list-style-type: none;
+  }
+  .footer .links li a {
+    color: white;
+    transition: color 0.2s;
+  }
+  .footer .links li a:hover {
+    text-decoration: none;
+    color: #4180CB;
+  }
+  .footer .about-company i {
+    font-size: 25px;
+  }
+  .footer .about-company a {
+    color: white;
+    transition: color 0.2s;
+  }
+  .footer .about-company a:hover {
+    color: rgb(49,183,188);
+  }
+  .footer .location i {
+    font-size: 18px;
+  }
+  .footer .copyright p {
+    border-top: 1px solid rgb(49,183,188);
+  }
+
+  /* Footer End */
+  .banner{
+    width: 100%;
+    height: 30rem;
+    background-image: url("../images/fees/banner.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .inner-banner{
+    background-color: rgb(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: relative;
+  }
+
+  .inner-banner h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* Banner end */
+
+  .jumbo-heading{
+    color:rgb(131, 131, 131);
+  }
+
+  /*Jumbo Heading end*/
+
+  .table-primary{
+    --bs-table-bg: rgb(0,92,110);
+    --bs-table-striped-bg: rgb(0,92,110);
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: rgb(0,92,110);
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: rgb(0,92,110);
+    --bs-table-hover-color: #fff;
+    color: #fff;
+    border-color: rgb(0,92,110);
+  }

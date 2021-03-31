@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Test Suite</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.14.1.css">
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.14.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./resources/js/gradeCalculator.js"></script>
+
+    <script>
+        QUnit.module('Math Course Empty', function() {
+          QUnit.test('should return math subject is empty', function(assert) {
+            assert.equal(getEligibility("digital_marketing",0,1,2,3,1).message, "The Math grade is not selected!");
+          });
+        });
+        QUnit.module('English Course Empty', function() {
+          QUnit.test('should return English subject is empty', function(assert) {
+            assert.equal(getEligibility("digital_marketing",1,0,2,3,1).message, "The English grade is not selected!");
+          });
+        });
+        QUnit.module('Echonomics Course Empty', function() {
+          QUnit.test('should return Echonomics subject is empty', function(assert) {
+            assert.equal(getEligibility("fda",1,1,1,0,1).message, "The Echonomics grade is not selected!");
+          });
+        });
+        QUnit.module('Eligible Condition For Non Technical Subjects', function() {
+          QUnit.test('should return Eligibility', function(assert) {
+            assert.equal(getEligibility("fda",1,1,2,3,1).message, "You are eligible for selected course.");
+          });
+        });
+        QUnit.module('Non Eligible Condition For Non Technical Subjects', function() {
+          QUnit.test('should return non Eligibility', function(assert) {
+            assert.equal(getEligibility("fda",1,1,2,3,4).message, "You are NOT eligible for selected course.");
+          });
+        });
+
+        QUnit.module('Non Eligible Condition For Non Technical Subjects (Extreme Values)', function() {
+          QUnit.test('should return non Eligibility', function(assert) {
+            assert.equal(getEligibility("fda",1,1,1,1,5).message, "You are NOT eligible for selected course.");
+          });
+        });
+        QUnit.module('Non Eligible Condition For Non Technical Subjects (Extreme Values)', function() {
+          QUnit.test('should return non Eligibility', function(assert) {
+            assert.equal(getEligibility("fda",1,1,1,1,6).message, "You are NOT eligible for selected course.");
+          });
+        });
+
+        QUnit.module('Eligible Condition For Technical Subjects', function() {
+          QUnit.test('should return Eligibility', function(assert) {
+            assert.equal(getEligibility("digital_marketing",1,1,2,3,1).message, "You are eligible for selected course.");
+          });
+        });
+        QUnit.module('Non Eligible Condition For Technical Subjects', function() {
+          QUnit.test('should return Non Eligibility', function(assert) {
+            assert.equal(getEligibility("digital_marketing",1,1,2,3,4).message, "You are NOT eligible for selected course.");
+          });
+        });
+
+        QUnit.module('Non Eligible Condition For Technical Subjects (Extreme Values)', function() {
+          QUnit.test('should return Eligibility', function(assert) {
+            assert.equal(getEligibility("digital_marketing",1,1,1,1,5).message, "You are NOT eligible for selected course.");
+          });
+        });
+        QUnit.module('Non Eligible Condition For Technical Subjects (Extreme Values)', function() {
+          QUnit.test('should return Eligibility', function(assert) {
+            assert.equal(getEligibility("digital_marketing",1,1,1,1,6).message, "You are NOT eligible for selected course.");
+          });
+        });
+      </script>
+</body>
+</html>
